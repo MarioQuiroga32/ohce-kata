@@ -22,7 +22,7 @@ const isPalindrome = (str) => {
 	}
 };
 
-const userName = process.argv[2] || process.env.USER || '';
+const userName = process.env.USER || '';
 
 const ohce = (str) => {
 	console.log(str);
