@@ -14,3 +14,20 @@ describe(' it greets you differently depending on the current time', () => {
 		expect(ohce('ohce Mario')).toEqual('¡Buenas tardes Mario!');
 	});
 });
+
+describe('When you introduce a palindrome', () => {
+
+	test('oto should print ¡Bonita palabra!', () => {
+		expect(ohce('oto')).toEqual('¡Bonita palabra!');
+	});
+  
+	test('hola should print aloh!', () => {
+		expect(ohce('hola')).toEqual('¡Bonita palabra!');
+	});
+});
+
+describe('when to stop', () => {
+	test('and it’ll answer Adios < your name > and end.', () => {
+		expect(ohce('Stop!').toEqual('Adios Mario'));
+	});
+});
