@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "GS christmas kata solution",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "jest  --verbose",
@@ -35,5 +37,8 @@
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "standard": "^14.3.1"
+  },
+  "dependencies": {
+    "commander": "^4.0.1"
   }
 }

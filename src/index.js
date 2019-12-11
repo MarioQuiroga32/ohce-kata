@@ -1,5 +1,13 @@
-const init = () => {};
+#!/usr/bin/env node
+const { greeting } = require('../lib/greetings');
+const { isPalindrome } = require('../lib/isPalindrome');
 
-init();
+const greet = (a) => {
+    return greeting(a);
+};
 
-module.exports = {};
+const checkPalindrome = (a) => {
+    return isPalindrome(a);
+}
+
+module.exports = { greet, checkPalindrome };
