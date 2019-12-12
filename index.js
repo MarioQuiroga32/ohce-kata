@@ -6,7 +6,6 @@ const { palindrome, isEmpty, listening } = require("./utils");
 
 program.version("0.0.1");
 
-
 program
 .option("<name>")
 .alias("w")

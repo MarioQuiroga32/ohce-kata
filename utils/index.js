@@ -1,4 +1,5 @@
-const { checkPalindrome } = require('../src');
+const { checkPalindrome } = require("../src");
+const { stop } = require('../fixtures');
 
 const readline = require("readline").createInterface({
   input: process.stdin,
@@ -9,15 +10,13 @@ function palindrome(string) {
   console.log(checkPalindrome(string));
 }
 
-const goodBye = name => `Adios ${name}`
+const goodBye = name => `Adios ${name}`;
 
-function isEmpty(str) {
-  return (!str || 0 === str.length);
-}
+const isEmpty = str => !str || 0 === str.length;
 
 function listening(name) {
   readline.question(``, string => {
-    if (string === "Stop!") {
+    if (string === stop) {
       console.log(goodBye(name));
       readline.close();
     } else {
@@ -27,5 +26,4 @@ function listening(name) {
   });
 }
 
-
-module.exports = { palindrome, goodBye, isEmpty, listening }
+module.exports = { palindrome, goodBye, isEmpty, listening };
