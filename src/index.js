@@ -2,12 +2,13 @@
 const { greeting } = require('../lib/greetings');
 const { isPalindrome } = require('../lib/isPalindrome');
 
-const greet = (a) => {
-    return greeting(a);
+const greet = name =>  {
+	const currentDate = new Date();
+	const currentHour = currentDate.getHours();
+    
+    return greeting(name, currentHour)
 };
 
-const checkPalindrome = (a) => {
-    return isPalindrome(a);
-}
+const checkPalindrome = word => isPalindrome(word)
 
 module.exports = { greet, checkPalindrome };

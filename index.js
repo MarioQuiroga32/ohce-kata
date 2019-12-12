@@ -1,24 +1,24 @@
 #! /usr/bin/env node
-const commander = require('commander');
+const commander = require("commander");
 const program = new commander.Command();
-const { greet, checkPalindrome } = require('./src');
+const { greet } = require("./src");
+const { palindrome, isEmpty, listening } = require("./utils");
 
-program.version('0.0.1');
+program.version("0.0.1");
 
 program
-	.option('--word <word>')
-	.option('ohce, --name <name>')
-	.alias('w')
-	.description('Word')
-	.action(() => {
-		const opts = program.opts();
-		if(typeof opts.name === 'string') {
-			console.log(greet(opts.name));
-		} else {
-			console.log(checkPalindrome(program.args[0]));
-		}
-	});   
-
-    
+.option("<name>")
+.alias("w")
+.description("Word")
+.action(() => {
+	const name = program.args[0];
+	
+	if (!isEmpty(name)) {
+		console.log(greet(name));
+		listening(name);
+	} else {
+		console.log("Insert your name");
+	}
+});
 
 program.parse(process.argv);
