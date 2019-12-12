@@ -11,25 +11,21 @@ function palindrome(string) {
 
 const goodBye = name => `Adios ${name}`
 
-function close(name) {
-  goodBye(name)
-}
-
 function isEmpty(str) {
   return (!str || 0 === str.length);
 }
 
-function question(name) {
+function listening(name) {
   readline.question(``, string => {
     if (string === "Stop!") {
-      close(name);
+      console.log(goodBye(name));
       readline.close();
     } else {
       palindrome(string);
-      question();
+      listening(name);
     }
   });
 }
 
 
-module.exports = { palindrome, close, goodBye, isEmpty, question }
+module.exports = { palindrome, goodBye, isEmpty, listening }
