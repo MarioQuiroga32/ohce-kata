@@ -1,6 +1,7 @@
 const { greet, checkPalindrome } = require('../../src'); 
 const { isPalindrome } = require('../../lib/isPalindrome');
 const { greeting } = require('../../lib/greetings');
+const { goodBye } = require('../../utils');
 
 describe(' it greets you differently depending on the current time', () => {
 
@@ -30,6 +31,6 @@ describe('When you introduce a palindrome', () => {
 
 describe('when to stop', () => {
 	test('and it’ll answer Adios < your name > and end.', () => {
-		expect(isPalindrome('Stop!', 'Mario')).toEqual('Adios Mario');
+		expect(goodBye('Mario')).toEqual('Adios Mario');
 	});
 });

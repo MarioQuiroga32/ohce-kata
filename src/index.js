@@ -2,14 +2,13 @@
 const { greeting } = require('../lib/greetings');
 const { isPalindrome } = require('../lib/isPalindrome');
 
-const greet = a =>  {
-    const userName = name || process.env.USER || '';
+const greet = name =>  {
 	const currentDate = new Date();
 	const currentHour = currentDate.getHours();
     
-    greeting(a, currentHour)
+    return greeting(name, currentHour)
 };
 
-const checkPalindrome = a => isPalindrome(a)
+const checkPalindrome = word => isPalindrome(word)
 
 module.exports = { greet, checkPalindrome };
