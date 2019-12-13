@@ -1,5 +1,6 @@
 # ohce-kata
 [![npm version](https://badge.fury.io/js/ohce-kata.svg)](https://badge.fury.io/js/ohce-kata) ![npm](https://img.shields.io/npm/dw/ohce-kata)
+
 Solution for Guidesmiths christmas 🎄 kata by [Giorgio](https://github.com/Girgetto) &amp; [Mario](https://github.com/MarioQuiroga32) ❤️.
 
 **Install globally** 🌍
