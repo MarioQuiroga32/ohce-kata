@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const { greeting } = require('../lib/greetings');
 const { isPalindrome } = require('../lib/isPalindrome');
 

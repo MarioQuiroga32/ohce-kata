@@ -1,5 +1,5 @@
 const { checkPalindrome } = require("../src");
-const { stop } = require('../fixtures');
+const { stop } = require('../fixtures'); 
 
 const readline = require("readline").createInterface({
   input: process.stdin,
@@ -20,7 +20,7 @@ function listening(name) {
       console.log(goodBye(name));
       readline.close();
     } else {
-      palindrome(string);
+      isEmpty(string) ? console.log('Insert a word') : palindrome(string);
       listening(name);
     }
   });
