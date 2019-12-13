@@ -1,9 +1,9 @@
-const { greet, checkPalindrome } = require("../../src");
-const { isPalindrome } = require("../../lib/isPalindrome");
+const { checkPalindrome } = require("../../src");
 const { greeting } = require("../../lib/greetings");
 const { goodBye, isEmpty } = require("../../utils");
 
 describe(" it greets you differently depending on the current time", () => {
+  afterAll(() => setTimeout(() => process.exit(), 1000))
   test("Between 20 and 6 hours, ohce will greet you saying: ¡Buenas noches < your name >!", () => {
     expect(greeting("Mario", 5)).toEqual("¡Buenas noches Mario!");
 	});

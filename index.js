@@ -2,7 +2,8 @@
 const commander = require('commander');
 const program = new commander.Command();
 const { greet } = require('./src');
-const { palindrome, isEmpty, listening } = require('./utils');
+const { isEmpty, listening } = require('./utils');
+const readline = require('./utils/readline');
 
 program.version('0.0.1');
 
@@ -15,7 +16,7 @@ program
 
     if (!isEmpty(name)) {
       console.log(greet(name));
-      listening(name);
+      listening(name, readline);
     } else {
       console.log('Insert your name');
     }
