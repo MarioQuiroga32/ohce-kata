@@ -16,7 +16,7 @@ function listening(name, readline) {
       readline.close();
     } else {
       isEmpty(string) ? console.log('Insert a word') : palindrome(string);
-      listening(name);
+      listening(name, readline);
     }
   });
 }
