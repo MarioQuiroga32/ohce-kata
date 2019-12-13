@@ -18,7 +18,7 @@ After installing, you will be able to interact with the app like this:
 ## 📦 Size comparison with other ohce pack in npm
 
 | Name        | Size           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | ohce-kata 🥇| 7.23 kB      |
 | ohce     🥈| 10.1 kB |
 | ohce-cli-app 🥉| 17.8 kB     |
