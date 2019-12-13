@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 const { checkPalindrome } = require("../../src");
 const { greeting } = require("../../lib/greetings");
-const { goodBye, isEmpty } = require("../../utils");
+const { goodBye, isEmpty, listening, process1 } = require("../../utils");
+var child = require('child_process');
 
 describe(" it greets you differently depending on the current time", () => {
-  afterAll(() => setTimeout(() => process.exit(), 1000))
   test("Between 20 and 6 hours, ohce will greet you saying: ¡Buenas noches < your name >!", () => {
     expect(greeting("Mario", 5)).toEqual("¡Buenas noches Mario!");
 	});
@@ -55,3 +56,26 @@ describe("Testing utils functions", () => {
     expect(isEmpty("Mario")).toEqual(false);
   });
 });
+
+describe('Testing cli', () => {
+  const spy = jest.spyOn(global.console, 'log');
+  const exitMock = jest.spyOn(process, 'exit').mockImplementation(() => { });
+
+  beforeEach(() => {
+    spy.mockClear();
+    exec = path.join(__dirname, '..', 'game.js');
+    proc = child.spawn(exec, { stdio: 'pipe' });
+  });
+
+  test("Should print an output", () => {
+      const readline = require("readline");
+    const input1 = 'oto';
+    const firstPrint = input1;
+    const secondPrint = '¡Bonita palabra!';
+    process1(input1, 'Mario', readline);
+    expect(console.log).toHaveBeenCalledTimes(2);
+    expect(console.log).toHaveBeenNthCalledWith(1, firstPrint);
+    expect(console.log).toHaveBeenNthCalledWith(2, secondPrint);
+    expect(exitMock).toHaveBeenCalledWith(0);
+    });
+})

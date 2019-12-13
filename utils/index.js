@@ -15,15 +15,21 @@ const checkIfNameIsProvide = name => {
   }
 };
 
+const closeProcess = (name) => {
+  console.log(goodBye(name));
+  readline.close();
+}
+
+const executeProcess = (string, name, readline) => {
+  isEmpty(string) ? console.log(insertWord) : palindrome(string);
+  listening(name, readline);
+}
+
+const process1 = (string, name, readline) => string === stop ? closeProcess(name) : executeProcess(string, name, readline);
+
 const listening = (name, readline) => {
   readline.question(``, string => {
-    if (string === stop) {
-      console.log(goodBye(name));
-      readline.close();
-    } else {
-      isEmpty(string) ? console.log(insertWord) : palindrome(string);
-      listening(name, readline);
-    }
+    process(string, name, readline)
   });
 };
 
@@ -32,5 +38,6 @@ module.exports = {
   goodBye,
   isEmpty,
   listening,
-  checkIfNameIsProvide
+  checkIfNameIsProvide,
+  process1
 };
