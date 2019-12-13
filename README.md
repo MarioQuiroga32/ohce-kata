@@ -1,22 +1,15 @@
 # ohce-kata
-Solution for Guidesmiths christmas kata by Giorgio &amp; Mario.
+Solution for Guidesmiths christmas 🎄 kata by [Giorgio](https://github.com/Girgetto) &amp; [Mario](https://github.com/MarioQuiroga32) ❤️.
 
-Install globally
+**Install globally** 🌍
 ```
 npm i -g ohce-kata
 ```
 
+You can find the npm package [here](https://www.npmjs.com/package/ohce-kata)
+
+##How to use:
+
 After installing, you will be able to interact with the app like this:
-```
-$ ohce-kata Pedro
-> ¡Buenos días Pedro!
-$ hola
-> aloh
-$ oto
-> oto
-> ¡Bonita palabra!
-$ stop
-> pots
-$ Stop!
-> Adios Pedro
-```
+
+![](https://media.giphy.com/media/RLKlVIk33cCF2IUoFI/giphy.gif)

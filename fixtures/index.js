@@ -1,3 +1,5 @@
 module.exports = {
-  stop: 'Stop!'
+  stop: 'Stop!',
+  insertWord: 'Insert a word',
+  insertYourName: 'Insert your name'
 }
