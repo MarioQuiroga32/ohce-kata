@@ -8,7 +8,7 @@ npm i -g ohce-kata
 
 After installing, you will be able to interact with the app like this:
 ```
-$ ohce Pedro
+$ ohce-kata Pedro
 > ¡Buenos días Pedro!
 $ hola
 > aloh
