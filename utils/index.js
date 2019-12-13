@@ -15,7 +15,7 @@ const checkIfNameIsProvide = name => {
   }
 };
 
-const closeProcess = (name) => {
+const closeProcess = (name, readline) => {
   console.log(goodBye(name));
   readline.close();
 }
@@ -25,11 +25,11 @@ const executeProcess = (string, name, readline) => {
   listening(name, readline);
 }
 
-const process1 = (string, name, readline) => string === stop ? closeProcess(name) : executeProcess(string, name, readline);
+const ohceProcess = (string, name, readline) => string === stop ? closeProcess(name, readline) : executeProcess(string, name, readline);
 
 const listening = (name, readline) => {
   readline.question(``, string => {
-    process(string, name, readline)
+    ohceProcess(string, name, readline)
   });
 };
 
@@ -39,5 +39,5 @@ module.exports = {
   isEmpty,
   listening,
   checkIfNameIsProvide,
-  process1
+  ohceProcess
 };
