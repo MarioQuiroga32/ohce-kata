@@ -8,7 +8,7 @@ npm i -g ohce-kata
 
 You can find the npm package [here](https://www.npmjs.com/package/ohce-kata)
 
-##How to use:
+## How to use:
 
 After installing, you will be able to interact with the app like this:
 
