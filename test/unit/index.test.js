@@ -77,7 +77,7 @@ describe('Testing cli', () => {
     expect(console.log).toHaveBeenNthCalledWith(3, firstPrint);
   });
 
-  test('Should print oiraM if the input is Mario', () => {
+  test('Should print Stop! if the input is Adios Mario', () => {
     const input1 = 'Stop!';
     const firstPrint = 'Adios Mario';
     ohceProcess(input1, 'Mario', readline);
