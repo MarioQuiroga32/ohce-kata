@@ -1,13 +1,13 @@
 {
   "name": "ohce-kata",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "GS christmas kata solution",
   "main": "index.js",
   "preferGlobal": true,
   "bin": "./index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest  --verbose",
+    "test": "jest  --verbose --detectOpenHandles",
     "test:coverage": "jest --verbose  --coverage",
     "test:watch": "jest --verbose  --watchAll",
     "lint": "standard",
